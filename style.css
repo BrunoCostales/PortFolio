@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #201e1efb;
+    
+   
+  }
+  #sobre-mi {
+    background-color: #ffffff;
+  }
+  
+  #proyectos {
+    background-color: #f1f1f1;
+  }
+  
+  #contacto {
+    background-color: #ffffff;
+  }
+  
+ 
+  
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  section {
+    height: 100vh;
+    scroll-margin-top: 40px;
+  }
+  
+  nav {
+    position: fixed;
+    padding: 1rem 1rem;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+   
+  }
+  h2 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  header {
+    height: 100vh;
+  }
+  .banner {
+    position: relative; /* Necesario para el overlay */
+    background-image: url('images/Background_PortFolio_1.png');
+    background-size: cover;
+     /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Fija la imagen de fondo al viewport */     
+    
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh;
+    overflow: hidden; /* Evita que el contenido desborde */
+  }
+  
+  .banner::before {
+    content: ''; /* Crea el overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Color negro con opacidad del 50% */
+    z-index: 1; /* Asegura que el overlay esté detrás del contenido */
+  }
+  
+  .banner-content {
+    position: relative; /* Asegura que el contenido esté por encima del overlay */
+    z-index: 2;
+    color: rgb(255, 255, 255); /* Ajusta el color del texto para que sea visible */
+
+    text-align: center; /* Centra el texto */
+    padding: 2rem; /* Espaciado interno */
+    border-right: .1px solid white;
+    width: 70%;
+    margin-top: 10%;
+  }
+  .bannerTitle {
+    padding-top:5px;
+    font-family: "Klee One", cursive;
+    font-size: 3.5rem; /* Tamaño ideal para destacar */
+    font-weight: 700; /* Negrita para mayor impacto */
+    color: #e6e0e0; /* Blanco para contraste con el fondo oscuro */
+    letter-spacing: 1px; /* Espaciado entre letras para mayor elegancia */
+    margin: 20px; /* Elimina márgenes adicionales */
+    text-align: left; /* Centra el texto */
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateX(-50px); /* Mueve el texto hacia la izquierda */
+    animation: slideIn 1.5s ease-out forwards; /* Aplica la animación */
+  }
+  .lead {
+    background: rgba(0, 0, 0, 0.4); /* Color negro con opacidad del 50% */
+    font-weight:100;
+    font-size: 16px;
+    
+
+  }
+  .custom-btn {
+    border: 1px solid #ccc;
+    color: #fff;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    transition: all 0.4s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    z-index: 2;
+    justify-content: center;
+  
+    bottom: 1.5rem;
+    left: 42.5%;
+    
+  }
+  
+  .custom-btn:hover {
+    background-color: #7d7a76; /* gris topo */
+    color: #fff;
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  .containerMain{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+  
+    flex-wrap: wrap;
+    color: white;
+    
+    
+  }
+  .containerImg{
+    margin-top: 10%;
+    
+    margin-right: 5%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    
+
+  }
+ .containerMain   img{
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  z-index: 1;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: filter 0.3s ease;
+
+  }
+  .containerMain img:hover {
+    filter: brightness(0.8); /* Cambia el brillo al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+  }
+  .description {
+    font-size: 0.5rem;
+    font-weight: 100;
+    margin-top: 20px;
+    color: #fff;
+    text-align:right;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(50px); /* Mueve el texto hacia abajo */
+    animation: slideIn 1.5s ease-out forwards; /* Aplica la animación */
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 10px;
+  }	
+.descriptionp{
+
+  width: 31%;
+  display: flex;
+  justify-content: center;
+
+}
+
+ 
+  @keyframes scroll-vertical {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+  
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  
+  
+  /* Definición de la animación */
+  @keyframes slideIn {
+    to {
+      opacity: 1; /* Hace el texto visible */
+      transform: translateX(0); /* Mueve el texto a su posición original */
+    }
+  }
+
+
+
+
+
+
+
+
+  #about-me {
+   
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #1a1c2c, #2e2f46, #3c3d5c);
+    line-height: 1.8;
+
+  }
+  #about-me h1  {
+    font-weight: 700;
+    color: #f0f0f0;
+  }
+  #about-me p {
+    color: #f0f0f0;
+    font-size: 1.05rem;
+    font-weight: 400;
+    padding: 20px;
+
+  
+    text-align: center;
+
+
+  }
+.iconbackground {
+    width: 80px;
+    height: 80px;
+    transform: rotate(300deg);
+    opacity: 35%;
+    position: relative;
+    right: 40px;
+    bottom:  20px;
+  }
+
+
+  /*Responsive*/
+
+  @media (max-width: 768px) {
+    .containerMain {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .banner-content {
+      border-right: none;
+      width: 90%;
+    }
+  }
+  @media (max-width: 768px) {
+    .custom-btn {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
