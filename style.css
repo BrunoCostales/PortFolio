@@ -6,11 +6,10 @@ body {
     scroll-behavior: smooth;
     background-color: #201e1efb;
     
+    
    
   }
-  #sobre-mi {
-    background-color: #ffffff;
-  }
+ 
   
   #proyectos {
     background-color: #f1f1f1;
@@ -47,6 +46,9 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
    
+  }
+  h1 {
+    font-size:  4rem;
   }
   h2 {
     font-weight: 600;
@@ -93,7 +95,7 @@ body {
   .bannerTitle {
     padding-top:5px;
     font-family: "Klee One", cursive;
-    font-size: 3.5rem; /* Tamaño ideal para destacar */
+    font-size: 6.5rem; /* Tamaño ideal para destacar */
     font-weight: 700; /* Negrita para mayor impacto */
     color: #e6e0e0; /* Blanco para contraste con el fondo oscuro */
     letter-spacing: 1px; /* Espaciado entre letras para mayor elegancia */
@@ -106,7 +108,7 @@ body {
   .lead {
     background: rgba(0, 0, 0, 0.4); /* Color negro con opacidad del 50% */
     font-weight:100;
-    font-size: 16px;
+    font-size: 1.2;
     
 
   }
@@ -196,10 +198,273 @@ body {
   width: 31%;
   display: flex;
   justify-content: center;
+  font-size: 0.7rem;
+
+}
+#aboutMe{
+
+  
+  background: linear-gradient(225deg, 
+  #263243 0%, 
+  #485b7a 25%, 
+  #131824 50%, 
+  #0f131e 75%, 
+  #070c14 100%);
+  
+  color: white;
+  display: flex;
+  align-items: center;
+
+  
+
 
 }
 
+
+#aboutMe h1 { 
+   
+    display: flex;
+    justify-content: left;
+    color: white;
+    padding-top: 1rem;
+    font-size: 7vw;
+    
+
+
+    
+  }
+  .sectionBox p{
+    font-size: 1vw;
+    font-weight: 100;
+    color: rgba(249, 249, 249, 0.734);
+    
+    padding: 1rem;
+    margin: 1rem;
+    
+    border-top: 1.5px solid transparent;
+    border-bottom: 1.5px solid transparent;
+    border-image: repeating-linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 10%,
+      rgba(255, 255, 255, 0.08) 20%
+    );
+    border-image-slice: 1;
+    border-radius: 12px;
+
+
+    
+       
+    
+  }
+  
+
+  .sectionBox{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    margin-left: 10%;
+    border-left: 1.5px solid transparent;
+    border-right: 1.5px solid transparent;
+    border-image: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 10%,
+      rgba(255, 255, 255, 0.08) 20%
+    );
+    border-image-slice: 1;
+    border-radius: 12px;
+    
+  }
+  .sectionBox2{
+    
+    
+    display: flex;
+    flex-direction: column;
+    
+    border-bottom: 1.5px solid transparent;
+    
+    border-image: repeating-linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 10%,
+      rgba(255, 255, 255, 0.08) 20%
+    );
+    border-image-slice: 1;
+    border-radius: 12px;
+    padding: 1rem;    
+    
+  }
+  .about{
+    font-weight: bolder;
+    
+    border-right: solid  1.5px rgba(246, 246, 246, 0.18);
+    border-left: solid  1.5px rgba(246, 246, 246, 0.18);
+    
+    width: 83%;
+    
+    
+  }
+  .me{
+    font-weight: 100;
+    transform: rotate(90deg); 
+    margin-left: 14.5vw;
+    border-left: solid 1.5px rgba(246, 246, 246, 0.18);
+    
+  }
  
+
+  #projects{
+   background-color: #070c14;
+   height: auto;
+   padding: 1.5rem;	
+  }
+  #projects h2{
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 7vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    
+    
+  }
+  .cardGroup{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);  
+    row-gap: 2rem;
+    justify-items: center;
+    
+    
+   
+    
+  }
+  .card{
+   padding: 1rem;
+   width: 35vw;
+   height: 70vh;
+   display: flex;
+   justify-content: space-evenly;
+
+
+  }
+  .card p {
+    
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+  .projectsCard .icons{
+    width:25px;
+    height: 25px;
+  }
+ 
+.card img {
+   object-fit: cover;
+  border-radius: 12px;
+  }
+  #contact{
+    background: linear-gradient(
+      145deg,
+      #2a0f29 0%,
+      #1e293b 25%,
+      #462e67 50%,
+      #1e293b 75%,
+      #2a0f2a 100%
+    );
+    color: white;
+    padding: 1rem;
+  }
+  
+
+  #contact h2{
+    font-family: "Megrim", system-ui;
+    font-weight: 400;
+    font-size: 7vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    
+    
+  }
+  #contact .label{
+    font-family: "Megrim", system-ui;
+    font-weight: 400;
+    font-size: 1.5rem;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+  }
+  .mailtoForm{
+    display: flex;
+    
+    flex-direction: column;
+    align-items:flex-start;
+    
+    
+    height: 100vh;
+  }
+  .mailtoForm input{
+    
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+      
+    border: none;
+    background-color: #ffffff14;
+    color: #ffffff;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  .mailtoForm textarea{
+    padding: 1rem;
+    
+    border-radius: 12px;
+    border: none;
+    background-color: #ffffff14;
+    color: #ffffff;
+    font-size: 1.2rem;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+    
+  }
+  .mailtoForm button{
+    padding: 1rem;
+    width: 30%;
+    
+    border-radius: 12px;
+    border: none;
+    background-color: #ffffff30;
+    color: #ffffff;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+    
+  }
+
+
+
+#contact a {
+    color: #e8f0c3;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+    padding: 0.5rem;
+  }
+
+#contact .pers{
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
   @keyframes scroll-vertical {
     0% { transform: translateY(0); }
     100% { transform: translateY(-50%); }
@@ -228,56 +493,17 @@ body {
 
 
 
-  #about-me {
-   
-    color: #e0e0e0;
-    background: linear-gradient(135deg, #1a1c2c, #2e2f46, #3c3d5c);
-    line-height: 1.8;
-
-  }
-  #about-me h1  {
-    font-weight: 700;
-    color: #f0f0f0;
-  }
-  #about-me p {
-    color: #f0f0f0;
-    font-size: 1.05rem;
-    font-weight: 400;
-    padding: 20px;
-
-  
-    text-align: center;
 
 
-  }
-.iconbackground {
-    width: 80px;
-    height: 80px;
-    transform: rotate(300deg);
-    opacity: 35%;
-    position: relative;
-    right: 40px;
-    bottom:  20px;
-  }
 
 
-  /*Responsive*/
 
-  @media (max-width: 768px) {
-    .containerMain {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .banner-content {
-      border-right: none;
-      width: 90%;
-    }
-  }
-  @media (max-width: 768px) {
-    .custom-btn {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-  
+
+
+
+
+
+
+
+
+
