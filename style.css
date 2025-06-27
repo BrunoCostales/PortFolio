@@ -18,16 +18,11 @@
 
 
 }
-html {
 
-}
 h1{
   font-family: var(--font-title);
   color: var(--text-light);
   font-size: 6rem;
-}
-h2{
-  
 }
 
 
@@ -413,15 +408,14 @@ li a:hover {
     overflow: hidden;
   }
 
- .logo {
+ .bannerTitle {
     margin: 0;
     display: flex;
-    position: fixed;
-    top: 33vh;
-    left:13vw;
+    
+ 
     z-index: 3;
     width: 100%;
-    
+    justify-content: space-around;
     font-size: 8vw;
     font-weight: 800;
     pointer-events: none;
@@ -433,12 +427,6 @@ li a:hover {
     perspective: 1000px;
     
   }
-  .logo.visible {
-  opacity: 0.8;
-  pointer-events: auto;
-  user-select: auto;
- 
-}
 
   .containerMain {
     height: 100vh;
@@ -485,9 +473,6 @@ li a:hover {
   }
 
 
-  .bannerTitle {
-  display: none;
-  }
  
 .scrollDownBtn.active .arrow-icon {
   transform: rotate(180deg);
@@ -499,7 +484,7 @@ li a:hover {
   .bannerTitle3 {
     font-size: 12px;
     margin: 0;
-    margin-top: 10vh;
+    
     justify-content: center;
      transition: all 0.6s ease;
   }
@@ -513,21 +498,23 @@ li a:hover {
     max-height: 0;
     padding-left: 0%;
     margin: 0;
-    font-size: 12px;
+    font-size: 15px;
     width: auto;
     margin-top: 0vh;
-    padding: 2%;
-    margin-left: 2px;
-    border-left: 3px solid rgba(255, 255, 255, 0.2);
+    padding: 5%;
+    margin-left: 5px;
     text-align: left;
-  
+     border-left: 3px solid rgba(255, 255, 255, 0.2);
 
+  margin: 6%;
 
   }
   .leadd.active {
   opacity: 1;
-  max-height: 500px;
-   transition: all 1.2s ease;
+  max-height: 800px;
+  transform: translateY(30vh);
+  
+   transition: all 1s ease;
 }
     .bannerTitleBack {
     font-size: 26vw;
@@ -541,6 +528,7 @@ li a:hover {
       -4px -4px 32px rgba(90,49,225,0.08);
     background: linear-gradient(120deg, rgba(255,255,255,0.12) 60%, rgba(242,92,132,0.08) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: ghost-disintegrate 8s infinite alternate;
     filter: blur(2.5px) brightness(1.1);
@@ -797,9 +785,4 @@ nav {
 }
 
 
-.experience {
-
   
-  
-  
-}
