@@ -1,4 +1,4 @@
-// mobileScroll.js
+// mobileScroll.js con Lenis
 
 export function initializeMobileScroll() {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
@@ -178,6 +178,4 @@ export function initializeMobileScroll() {
     );
 
     console.log("Sistema de scroll controlado inicializado");
-    console.log("Estado inicial: Sin scroll libre");
-}
-
+    console.log("Estado inicial: Sin scroll libre");}

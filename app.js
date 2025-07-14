@@ -1,9 +1,12 @@
-import { initializeMobileScroll } from './mobileScroll.js';
-initializeMobileScroll();
 
-// Detecta si estás en móvil
 
-gsap.registerPlugin(ScrollTrigger);
+import { initApp } from './coordScroll.js';
+
+// Inicializar scroll
+
+
+initApp();
+
 
 // -----------------------------------
 // 🫧 BURBUJAS (no se tocan)
