@@ -1,23 +1,28 @@
-export function expAnimationInit(){
-const experience= document.getElementById("experience");
+export function expAnimationInit() {
+  const container = document.querySelector("#experience");
+  const projectList = container.querySelector(".projectList");
+  const scrollLength = projectList.scrollWidth - window.innerWidth;
 
-gsap.fromTo(experience,{
-  opacity: 0,
-  filter: "blur(20px)",
-  y: 100
-}, {
-  opacity: 1,
-  filter: "blur(0px)",
-  y: 0,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: "#separator",
-    start: "top top",
-    end: "bottom center",
-    scrub: true,
-   
-  }
-});
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container,
+      start: "top top",
+      end: `+=${scrollLength}`,
+      scrub: 1,
+      pin: true,
+      anticipatePin: 1
+    }
+  });
 
+  // Paso 1: Iluminación
+  tl.to(container, {
+    filter: "brightness(1)",
+    duration: 0.1
+  });
 
+  // Paso 2: Movimiento horizontal
+  tl.to(container, {
+    x: -scrollLength,
+    ease: "none"
+  });
 }

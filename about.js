@@ -1,3 +1,4 @@
+import { expAnimationInit } from "./experience.js";
 
 export function initAboutAnimations(value) {
   const tl = gsap.timeline({
@@ -10,8 +11,17 @@ export function initAboutAnimations(value) {
       scrub: true, // hace que la animación siga el scroll
        // fija el elemento durante la animación
       markers: false,
+      toggleActions: 'play reverse play reverse', // acciones al entrar y salir del trigger
       
-      
+     onLeave: () => {
+        const aboutTrigger = ScrollTrigger.getById("about");
+        if (aboutTrigger) {
+          aboutTrigger.kill(true);
+        }
+
+        ScrollTrigger.refresh(true);
+        
+      }
      
     },
     

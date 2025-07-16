@@ -3,6 +3,7 @@ import {initScrollEngine} from './scrollEngine.js';
 import { initHomeAboutScroll } from './home.js';
 import { initAboutAnimations } from './about.js';
 import { expAnimationInit } from './experience.js';
+import { shooter } from './separator.js';
 
 gsap.registerPlugin(ScrollTrigger);
 const lenis = initScrollEngine();
@@ -15,7 +16,7 @@ export function initApp() {
 
   initHomeAboutScroll(lenis);
   initAboutAnimations();
-  expAnimationInit();
+  shooter();
 
 
 

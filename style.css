@@ -39,6 +39,11 @@ body {
   overflow-y: scroll;
   scroll-behavior: auto;
   scroll-snap-type: y;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 section{
 
@@ -646,30 +651,32 @@ background-color: transparent;
 
 
 
-
-
 #separator{
-  height: 200vh;
 
-  background-color: #000;
-  
+height: 50vh;
+background-color: #000000;
 
 }
-
 
 
 #experience {
   position: relative;
-  z-index: 1;
-  opacity: 0;
-  transform: translateY(100px);
+  height: auto;
+  width: 500vw;
+  filter: brightness(0); 
+  will-change: transform;
+  
 }
 
-
-
-
-
-
+.capture-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
 
 
 
@@ -719,8 +726,15 @@ background-color: transparent;
   user-select: none;
   
 }
+#experience .containerMain{
+  flex-direction: row;
+  display: flex;
+   background-size: 100vw ; /* cada repetición ocupa el tamaño completo de la ventana */
+}
 
-
+#experience .mainContent{
+  width: 100vw;
+}
 #experience .banner-content {
   width: 45%;
   height: 50%;
@@ -732,6 +746,7 @@ background-color: transparent;
   margin-right: 5%;
     animation: none;
     z-index: 3;
+   background-color: #9a126826;
     
   
 }
@@ -798,9 +813,14 @@ background-color: transparent;
 
 
 
+/*
+/* PROYECTOS
+#projects {
+position: relative;
+height: 100vh;
 
-/*PROYECTOS*/
 
+}
 
 
 #projects .banner-content {
@@ -865,7 +885,7 @@ background-color: transparent;
   font-family: var(--font-title);
   font-weight: 800;
    
-  color: var(--text-light);
+  color: black;
   font-size: 3vw;
   margin: 0;
   text-align: center;
@@ -879,12 +899,11 @@ background-color: transparent;
   margin-bottom: 20px;
   font-family: var(--font-body);
   font-weight: 200;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
   font-size: 0.8vw;
   text-align: left;
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
-  pointer-events: none;
-  user-select: none;
+ 
   
 
 
@@ -892,14 +911,40 @@ background-color: transparent;
 .work .description {
   width: 100%;
   max-width: 32vw;
-  white-space: normal;
-  word-break: break-word;
-  overflow-wrap: break-word;
+  
   text-align: left;
   margin: 2rem;
 }	
+.horizontalWrapper {
+  width: 400vw;
+  height: 100vh;
+  
+  will-change: transform;
 
+    background-color: rgba(92, 32, 32, 0.2); /* temporal */
+  /* temporal */
 
+/*
+.projectList{
+
+display: flex;
+flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100vh;
+  width: max-content;
+  will-change: transform;
+  border: 6px solid green;  temporal 
+}
+.work{
+  flex: 0 0 100vw; /* cada proyecto ocupa una pantalla
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  background-color: #000;
+  border: 4px solid blue;
+
+}
 
 
 .projectList p {
@@ -946,8 +991,32 @@ background-color: transparent;
   object-position: center;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
+} */
+
+
+.horizontalWrapper {
+  overflow: hidden;
+  width: 400vw;
+  height: 100vh;
+  position: relative;
+  background-color: #306073;
 }
 
+.projectList {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 400vw;
+}
+
+.work {
+  flex: 0 0 100vw;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.work h1{
+  color: #ffffff;
+}
 
 #contact {
  
