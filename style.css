@@ -659,6 +659,14 @@ background-color: #000000;
 }
 
 
+
+
+
+
+
+
+/*EXPERIENCE*/
+
 #experience {
   position: relative;
   height: auto;
@@ -667,23 +675,6 @@ background-color: #000000;
   will-change: transform;
   
 }
-
-.capture-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
-}
-
-
-
-
-
-/*EXPERIENCE*/
-
 
 
 .experienceTitlebox {
@@ -729,8 +720,94 @@ background-color: #000000;
 #experience .containerMain{
   flex-direction: row;
   display: flex;
-   background-size: 100vw ; /* cada repetición ocupa el tamaño completo de la ventana */
+   background-size: 400vw ; /* cada repetición ocupa el tamaño completo de la ventana */
+  
+  background-size: cover;
+  background-attachment: fixed;
+  mix-blend-mode: none;
+
+  
+  background-blend-mode: screen;
+  mix-blend-mode: hard-light;
+  z-index: 1;
+
+  
+
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(20px);
+ 
+  z-index: 2;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0);
+
+ 
+
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+ 
+
+  
+
+   
 }
+.blop-bubble {
+  position: absolute;
+  width: 70vw;
+  height: 90vh;
+  border-radius: 50%;
+  top: 32%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    ellipse at 45% 70%,
+    #5a31e1b8,
+    #5a31e14f 25%,
+    #5a31e100 40%,
+    #5a31e100 70%,
+    #5a31e100 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+    
+  filter: blur(4px);
+  
+}
+
+.second{
+  position: fixed;
+  top: 35%;
+  left:3%;
+  filter: blur(20px);
+  
+}
+.flash{
+  height: 45px;
+  width: 45px;
+  background-color: red;
+  position: fixed;
+  border-radius: 50%;
+  background-color: hsl(343, 85%, 65%);
+  box-shadow:
+    0 0 10px hsla(343, 85%, 65%, 0.6),
+    0 0 20px hsla(343, 85%, 65%, 0.5),
+    0 0 40px hsla(343, 85%, 65%, 0.4),
+    0 0 80px hsla(343, 85%, 65%, 0.3);
+    filter: blur(10px);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: pulseFlotar 2.4s ease-in-out infinite;
+  
+}
+@keyframes pulseFlotar {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-60px) scale(1.2);
+    opacity: 1;
+  }
+}
+
 
 #experience .mainContent{
   width: 100vw;
@@ -746,8 +823,11 @@ background-color: #000000;
   margin-right: 5%;
     animation: none;
     z-index: 3;
-   background-color: #9a126826;
-    
+   background-color:hsla(257, 100%, 47%, 0.185);
+  mix-blend-mode:screen;
+
+  
+  
   
 }
 
@@ -813,194 +893,23 @@ background-color: #000000;
 
 
 
-/*
-/* PROYECTOS
-#projects {
-position: relative;
-height: 100vh;
-
-
-}
-
-
-#projects .banner-content {
-  width: 50%;
-  height: 50%;
-  max-width: 50%;
-  
-  border-radius: 25px ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 5%;
-    animation: none;
-    z-index: 3;
-   
-    
-  
-}
-.projectTitlebox {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 50%;
-  height: 78%;
-  padding: 0 5vw;
-  z-index:2;
-  margin-top: 5%;
-  
-}
-
-.projectTitlebox  h2{
-  font-family: var(--font-body);
-  text-transform: uppercase;
-  font-weight: 100;
-  color: rgb(68, 67, 67);
-  font-size: 1vw;
-  margin: 0;
-  text-align: center;
-  text-spacing-trim: normal;
-  text-wrap-mode: normal;
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
-  pointer-events: none;
-  user-select: none;
-  
-
-}
-.projectTitlebox h1 {
-  font-family: var(--font-title);
-  font-weight: 800;
-   
-  color: var(--text-light);
-  font-size: 3vw;
-  margin: 0;
-  text-align: center;
-  text-shadow: 0 0 16px rgba(97, 95, 95, 0.8);
-  pointer-events: none;
-  user-select: none;
-  
-}
-#projects .work h1 {
-  font-family: var(--font-title);
-  font-weight: 800;
-   
-  color: black;
-  font-size: 3vw;
-  margin: 0;
-  text-align: center;
-  text-shadow: 0 0 16px rgba(97, 95, 95, 0.8);
-  pointer-events: none;
-  user-select: none;
-  
-}
-.work p{
-
-  margin-bottom: 20px;
-  font-family: var(--font-body);
-  font-weight: 200;
-  color: rgb(255, 0, 0);
-  font-size: 0.8vw;
-  text-align: left;
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
- 
-  
-
-
-}
-.work .description {
-  width: 100%;
-  max-width: 32vw;
-  
-  text-align: left;
-  margin: 2rem;
-}	
-.horizontalWrapper {
-  width: 400vw;
-  height: 100vh;
-  
-  will-change: transform;
-
-    background-color: rgba(92, 32, 32, 0.2); /* temporal */
-  /* temporal */
-
-/*
-.projectList{
-
-display: flex;
-flex-direction: row;
-  flex-wrap: nowrap;
-  height: 100vh;
-  width: max-content;
-  will-change: transform;
-  border: 6px solid green;  temporal 
-}
-.work{
-  flex: 0 0 100vw; /* cada proyecto ocupa una pantalla
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 2rem;
-  display: flex;
-  background-color: #000;
-  border: 4px solid blue;
-
-}
-
-
-.projectList p {
-  width: 100%;
-  max-width: 32vw;
-  white-space: normal;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  text-align: left;
-  margin: 0;
-}
-
-.projectLinks {
-  padding: 5%;
-  
-}
-
-.projectLinks a {
-  color: var(--text-light);
-  text-decoration: none;
-  font-family: var(--font-body);
-  font-weight: 200;
-  text-align: left;
-  padding-right: 2%;
-
-}
-
-
-.projectCardImage{
-  
-  max-height: 300px;
-  max-width: 600px;
-  margin: auto;
-  padding: auto;
-
-
-
-}
-
-.projectCardImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-} */
-
 
 .horizontalWrapper {
   overflow: hidden;
   width: 400vw;
   height: 100vh;
   position: relative;
-  background-color: #306073;
+  background-size: 400vw 400%;
+            
+
+
+
+
+
+
 }
+
+
 
 .projectList {
   display: flex;
@@ -1009,10 +918,13 @@ flex-direction: row;
   width: 400vw;
 }
 
+
 .work {
   flex: 0 0 100vw;
-  padding: 2rem;
+  height: 100vh;
   box-sizing: border-box;
+  border: 2px solid white;
+  margin-top: 0;
 }
 .work h1{
   color: #ffffff;
@@ -1025,7 +937,8 @@ flex-direction: row;
   background-color: var(--midnight-plum);
   position: relative;
   z-index: 0;
-  background-color: #9b0452;
+  
+  background-color:#ed4c8f;
   display: flex;
   justify-content: center;
   align-items: center;
