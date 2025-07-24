@@ -1,3 +1,4 @@
+import { contactCopy } from './contact.js';
 import { initApp } from './coordScroll.js';
 
 // Inicializar scroll
@@ -55,9 +56,14 @@ navLinks.forEach(link => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+
+
+  contactCopy();
+
   // Botones manuales
   const btnEn = document.getElementById('btn-en');
   const btnEs = document.getElementById('btn-es');
+  
 
   if (btnEn) btnEn.addEventListener('click', () => changeLanguage('en'));
   if (btnEs) btnEs.addEventListener('click', () => changeLanguage('es'));

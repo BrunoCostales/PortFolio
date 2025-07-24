@@ -1214,6 +1214,9 @@ background-color: #000000;
 }
 
 
+
+
+
 .socialLinks {
   display: flex;
   flex-direction: row;
@@ -1238,14 +1241,39 @@ background-color: #000000;
   text-shadow: #fd0087 0px 0px 20px;
   transition: color 0.3s ease-in-out;
 }
-#emailText{
+.information{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  
+}
+.emailContent{
 
 font-family: var(--font-title);
 font-size:1vw;
 color: var(--text-light);
-
+display: flex;
+align-items: center;
+align-content: center;
 }
 
+
+
+#copyIcon{
+  cursor: pointer;
+  background: transparent;
+  scale: 0.5;
+  padding: 0;
+  margin: 0;
+  filter: brightness(0.8);
+
+}
+#copyIcon:hover{
+  transition: all 1.2 ease-in-out;
+  scale: 0.7;
+}
 
 .mailtoForm{
 
