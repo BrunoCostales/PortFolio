@@ -244,6 +244,48 @@ nav {
 
 }
 
+.langSwitcher{
+ 
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+}
+.langSwitcher span{
+    font-family: var(--font-title);
+    color: #b0b0b03f;
+    font-size: 2vw;
+
+}
+
+
+.langSwitcher button{
+
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: #b0b0b0;
+  cursor: pointer;
+  font-size: 1vw;
+
+}
+.langSwitcher button:hover{
+
+background: #b0b0b00b;
+color: var(--neon-coral);
+
+
+}
+
+
+
 .logo {
   font-size: 3rem;
   padding: 15px;
@@ -262,11 +304,11 @@ nav ul {
 }
 
 li a {
-  color: var(--text-light);
+  color: #e3e5e781;
   text-decoration: none;
   padding: 15px;
   font-family: var(--font-title);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.5vw;
 }
 li a:hover {
@@ -302,7 +344,7 @@ li a:hover {
 }
 .bannerTitle2 {
   font-family: var(--font-title);
-  font-weight: 700;
+  font-weight: 900;
   display: flex;
   margin:0;
   font-size: 4vw;
@@ -313,8 +355,12 @@ li a:hover {
   margin-left: 2%;
   font-family: var(--font-title); 
   font-weight: 500;
-  color: rgb(203, 199, 199); 
-  font-size: 1vw;
+  color:#b5a9ae; 
+  font-size: .8vw;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
   
 }
 .bannerTitle {
@@ -338,7 +384,7 @@ li a:hover {
   
   font-family: var(--font-body);
   font-size: 0.9vw;
-  font-weight: 300;
+  font-weight: 400;
   text-align: left;
   border-left: 5px solid rgba(255, 255, 255, 0.2);
   padding-left: 20px;
@@ -346,8 +392,9 @@ li a:hover {
   margin-top: 10%;
   z-index: 2;
   position: relative;
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
-  color: #ffffff;
+  text-shadow: 0 0 16px rgba(86, 76, 76, 0.8);
+  color: #e5dfdf;
+  background-blend-mode: none;
   text-wrap-mode: normal;
   line-height: 1.5;
   pointer-events: none;
@@ -464,7 +511,7 @@ background-color: transparent;
 .titleAbout {
   font-family: var(--font-title);
   font-weight: 400;
-  color: var(--text-light);
+  color: #FFFFFF;
   font-size: 10vw;
   margin: 0;
   text-align: center;
@@ -604,7 +651,7 @@ background-color: transparent;
   border-left: 3px solid rgb(125, 125, 125);
   padding-left: 20px;
 
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 16px rgba(49, 45, 45, 0.8);
   color: #ffffff;
   text-wrap-mode: normal;
   line-height: 1.5;
@@ -692,7 +739,7 @@ background-color: #000000;
   font-family: var(--font-body);
   text-transform: uppercase;
   font-weight: 100;
-  color: rgb(68, 67, 67);
+  color: rgb(110, 103, 103);
   font-size: 1vw;
   margin: 0;
   text-align: center;
@@ -706,16 +753,21 @@ background-color: #000000;
 }
 .experienceTitlebox h1 {
   font-family: var(--font-title);
-  font-weight: 800;
+  font-weight: 900;
   text-transform: uppercase;
   color: var(--text-light);
   font-size: 3vw;
   margin: 0;
   text-align: center;
-  text-shadow: 0 0 16px rgba(97, 95, 95, 0.8);
+  text-shadow: 0 0 16px rgba(112, 108, 108, 0.8);
   pointer-events: none;
   user-select: none;
   
+}
+#experience .leadd{
+
+  color: #ded9d9;
+  font-weight: 300;
 }
 #experience .containerMain{
   flex-direction: row;
@@ -814,7 +866,7 @@ background-color: #000000;
 }
 #experience .banner-content {
   width: 45%;
-  height: 50%;
+  height: 60%;
   
   border-radius: 25px ;
   display: flex;
@@ -841,6 +893,7 @@ background-color: #000000;
   padding: 0 0;
   
 }
+
 .experienceList ul {
   list-style: none;
   padding: 0;
@@ -849,11 +902,9 @@ background-color: #000000;
 .experienceList li {
   margin-bottom: 20px;
   font-family: var(--font-body);
-  font-weight: 200;
-  color: rgb(255, 255, 255);
   font-size: 0.8vw;
   text-align: left;
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 16px rgba(39, 36, 36, 0.8);
   pointer-events: none;
   user-select: none;
 }
@@ -866,6 +917,8 @@ background-color: #000000;
   overflow-wrap: break-word;
   text-align: left;
   margin: 0;
+  color: #B0B0B0;
+  font-weight: 300;
 }
 
 
@@ -885,10 +938,34 @@ background-color: #000000;
 
 
 
+.myprojects h2{
+
+  font-family: var(--font-body);
+  color: #B0B0B0;
+  margin: 0;
+  padding: 0;
+  opacity: .1;
+      text-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+      font-weight: 400;
+}
+.myprojects h1{
+  margin: 0;
+  padding: 0;
+  opacity: .2;
+  font-weight: 400;
+  font-size: 2vw;
+}
 
 
+.myprojects{
 
 
+  left: 21%;
+  top: 5%;
+  position: absolute;
+ 
+
+}
 
 
 
@@ -923,11 +1000,139 @@ background-color: #000000;
   flex: 0 0 100vw;
   height: 100vh;
   box-sizing: border-box;
-  border: 2px solid white;
   margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  
+  
 }
-.work h1{
+.workContent{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 45%;
+  margin:2rem;
+  align-items: flex-start;
+  align-content: flex-start;
+  
+
+}
+.workContent h1{
   color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+    text-shadow: 0 0 16px rgba(255, 255, 255, 0.245);
+
+}
+.workContent h2{
+  color:rgba(226, 224, 224, 0.336);
+  font-family: var(--font-body);
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.work p{
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: #eae5e5df;
+  font-size: 0.8vw;
+}
+.projectLinks{
+
+  height: 5%;
+
+
+}
+.projectLinks a{
+  text-decoration: none;
+  color: rgba(225, 223, 236, 0.333);
+  text-transform: capitalize;
+  font-family: var(--font-title);
+  font-weight: 500;
+  margin-right: 5rem;
+  font-size: 3rem;
+  
+}
+.projectLinks a:hover{
+
+  color: var(--neon-coral);
+   transition: color 0.7s ease-in-out;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.245);
+
+
+}
+
+.projectCardImage{
+ 
+ 
+ width: 50%;
+ height: 100vh;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ align-content: center;
+ padding-left: 3%;
+ padding-right: 2%;
+ overflow: hidden;
+
+ 
+
+}
+.projectCardImage img{
+  width: 800px;
+  height: 1000px;
+  aspect-ratio: 16/9;
+   border-radius: 25px;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+
+.technologiesList{
+
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  
+
+}
+.technologiesList ul{
+  
+  color: white;
+  font-family: var(--font-body);
+  border-radius: 30px;
+  border: 1px solid white;
+  margin-right: 2%;
+  padding: 2%;
+  text-transform: uppercase;
+  user-select: none;
+  
+
+}
+
+.technologiesList ul:hover{
+
+    background-color:rgba(202, 202, 202, 0.223);
+    
+}
+
+
+
+
+.blurWork{
+  filter: blur(10px);
+  user-select: none;
+  pointer-events: none;
 }
 
 #contact {
@@ -998,8 +1203,8 @@ background-color: #000000;
 }
 #contact h2 {
   padding: 0;
-  font-weight: 200;
-  color: rgb(159, 135, 135);
+  font-weight: 600;
+  color: rgba(240, 236, 236, 0.327);
   font-size: 1vw;
   text-align: center;
   
@@ -1021,7 +1226,7 @@ background-color: #000000;
 
 }
 .socialLinks a {
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.379);
   text-shadow: #fd0087 0px 0px 14px;
   text-decoration: none;
   font-weight: 500;
@@ -1033,7 +1238,13 @@ background-color: #000000;
   text-shadow: #fd0087 0px 0px 20px;
   transition: color 0.3s ease-in-out;
 }
+#emailText{
 
+font-family: var(--font-title);
+font-size:1vw;
+color: var(--text-light);
+
+}
 
 
 .mailtoForm{
@@ -1045,6 +1256,19 @@ height: auto;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  color: #fffffff4;
+
+
+}
+.mailtoForm .label{
+
+  font-size: 1vw;
+  color: #ffffff7f;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-title);
+  font-weight: 500;
+  margin-bottom: 1rem;
 
 
 }
@@ -1054,11 +1278,11 @@ height: auto;
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--text-light);
+  background-color: rgba(255, 255, 255, 0.078);
+  color: #ffffff;
   font-family: var(--font-body);
   font-size: 1vw;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.089);
 }
 .mailtoForm input:focus {
   outline: none;
@@ -1067,7 +1291,7 @@ height: auto;
 .mailtoForm textarea {
   width: 80%;
   
-  height: 50px;
+  height: 200px;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -1084,9 +1308,9 @@ height: auto;
   background: transparent;
   color: white;
   font-family: var(--font-body);
-  font-size: 1vw;
+  filter: invert(100%);
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  
 }
 
 .arrow{
