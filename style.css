@@ -404,12 +404,12 @@ li a:hover {
 .sillhoullete {
   position: absolute;
   top: 10%;
-  left: 80%;
-  width: 32vw;
+  left: 85%;
+  width: 30vw;
   max-width: 800px;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none;
   user-select: none;
   transform: translate(-50%, 0); /* Centra horizontalmente respecto a left */
@@ -427,6 +427,7 @@ li a:hover {
   display: block;
   filter: drop-shadow(0 0 10px rgb(0, 0, 0));
   mix-blend-mode: lighten;
+  
  
 }
 
@@ -1087,8 +1088,8 @@ background-color: #000000;
 
 }
 .projectCardImage img{
-  width: 800px;
-  height: 1000px;
+  width: 80%;
+  height: 85vh;
   aspect-ratio: 16/9;
    border-radius: 25px;
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
@@ -1746,49 +1747,311 @@ nav {
 }
 
 }
+@media (width: 1920px) and (height: 1080px) {
+ 
 
 
-/*PROJECTS*/
-
-
-#projects  .banner-content {
+.projectCardImage{
+  max-height: 500px;
   
+}
+.projectCardImage img{
+
+  height: 50%;
+
+}
+
+
+
+}
+
+@media (max-width: 1366px) and (min-width: 1025px) {
+  
+  .bannerTitle{
+
+    font-size: 5.5vw;
+  }
+
+  .bannerTitle3{
+    font-size: 1.5vw;
+  }
+
+
+  .banner-content{
+
+  height: 60vh;
+  width: 75vw;
+  }
+  .sillhoullete{
+
+    top: 25%;
+    width: 40vw;
+  }
+  .sillhoullete img{
+    z-index: -2;
+  }
+
+  .leadd{
+    
+    font-size: 1.1rem;
+  }
+
+  .experienceTitlebox{
+
+    width: 50%;
+    padding-left: 1vw;
+  }
+
+  .experienceTitlebox .leadd {
+     width: 80%;
+     font-size: 1vw;
+  }
+
+  #experience .banner-content {
+    width: 50%;
+    height: 60vh;
+    padding-top : 1vh;
+    padding-bottom: 1vh;
+    
+  }
+  .experienceList{
+    
+width: 100%;
+
+  }
+  .experienceList ul{
+
+ width: 100%;
+ 
+    
+
+  }
+  .experienceList li {
+    padding: 0 1rem;
+  }
+
+  .experienceList p{
+    width: 100%;
+    max-width: fit-content;
+    font-size: 1vw;
+  }
+  .experienceList h2{
+    font-size: 1.6vw;
+    
+  }
+
+
+
+.workContent{
+
+  padding: 1vw;
+}
+.workContent h1{
+
+  font-size: 3.5vw;
+}
+.workContent h2{
+
+  font-size: 1vw;
+  margin-bottom: 0;
+}
+.technologiesList ul{
+
+  font-size: .8vw;
+  color: #b0b0b0;
+  border-color: #e9e6e6;
+
+}
+.workContent .description p{
+
+  font-size: 1vw;
+  color:#FFFFFF;
+}
+.projectLinks {
   display: flex;
   flex-direction: row;
-  animation: none;
 }
-#projects  .bannerTitle{
-  
+.projectLinks a{
 
-  font-size: 3rem;
+    font-size: 1.8vw;
 }
 
-#projects nav ul {
-  display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-  justify-content: space-evenly;
-
-  
 
 }
-.hoverBlue:hover {
-  color: #7865d7;
-  transition: color 0.3s ease-in-out;
-  text-shadow: 0 0 16px rgba(255, 255, 255, 0.245);
 
-}
-#projects nav {
+
+@media (max-width: 1280px) {
+  .bannerTitle {
+    font-size: 5.5vw;
+  }
+
+  .leadd {
+    font-size: 1.1vw;
+    width: 80%;
+  }
+
+  .projectCardImage img {
+    width: 300px;
+    height: auto;
+  }
+
+  .workContent h1 {
+    font-size: 2vw;
+  }
+
+  .workContent p {
+    font-size: 1vw;
+  }
+
+  .projectLinks a {
+    font-size: 2rem;
+  }
  
-  border-right: 2px solid rgba(255, 255, 255, 0.2);
-  align-items: stretch;  
-
 }
 
-.previewProject {
+@media (max-width: 1024px) {
+  .titleBox {
+    align-items: center;
+    text-align: center;
+  }
 
-  width: 600px;
-  height: 400px;
+  .bannerTitle {
+    font-size: 5vw;
+  }
+  .bannerTitleBack{
+    bottom: 70%;
+    
+  }
+
+  .bannerTitle3 {
+    font-size: 2vw;
+  }
+
+  .leadd {
+    font-size: 1.4vw;
+    width: 90%;
+    text-align: left;
+  }
+
+  .experienceTitlebox {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .experienceTitlebox h1 {
+    font-size: 4vw;
+  }
+
+  .work {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectCardImage {
+    width: 90%;
+    padding: 0;
+  }
+
+
+  .sillhoullete {
+
+      top: 20%;
+      left: 50%;
+      z-index: -40;
+  }
 }
+@media (max-width: 768px) {
+  .banner-content {
+    padding: 1rem;
+  }
 
+  .bannerTitle {
+    font-size: 8vw;
+  }
+
+  .leadd {
+    font-size: 14px;
+    width: 95%;
+  }
+
+  .titleAbout,
+  .titleMe {
+    font-size: 12vw;
+    text-align: center;
+  }
+
+  .aboutBox,
+  .layoutAboutBox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projectCardImage img {
+    width: 100%;
+    height: auto;
+  }
+
+  .workContent {
+    width: 90%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .technologiesList ul {
+    font-size: 12px;
+    padding: 1%;
+  }
+
+  .projectLinks a {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .bannerTitle {
+    font-size: 10vw;
+  }
+
+  .bannerTitle3 {
+    font-size: 4vw;
+  }
+
+  .leadd {
+    font-size: 12px;
+    padding: 2%;
+  }
+
+  .titleAbout,
+  .titleMe {
+    font-size: 14vw;
+  }
+
+  .aboutImagesStack,
+  .sillhoullete,
+  .Discover {
+    width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .workContent h1 {
+    font-size: 6vw;
+  }
+
+  .workContent h2 {
+    font-size: 4vw;
+  }
+
+  .workContent p {
+    font-size: 14px;
+  }
+
+  .projectLinks a {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: 3vw;
+  }
+}
 
