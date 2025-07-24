@@ -9,7 +9,7 @@ export function expAnimationInit() {
       trigger: container,
       start: "top top",
       end: `+=${scrollLength}`,
-      scrub: 1,
+      scrub: 2,
       pin: true,
       anticipatePin: 1
     }

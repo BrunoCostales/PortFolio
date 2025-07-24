@@ -3,12 +3,13 @@
 export function initScrollEngine() {
   const lenis = new Lenis({
     smooth: true,
-    duration: 1.5,
+    duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // suavidad
     direction: 'vertical',
     gestureDirection: 'vertical',
     smoothTouch: true,
     touchMultiplier: 1.5,
+    wheelMultiplier:1.4
   });
 
   function raf(time) {
