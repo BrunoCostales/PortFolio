@@ -109,5 +109,53 @@ export function initHomeAboutScroll(lenis) {
     }
   };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
   window.addEventListener('wheel', handleScroll, { passive: false });
+
+  let touchStartY = 0;
+
+function handleTouchStart(e) {
+  touchStartY = e.touches[0].clientY;
+}
+
+function handleTouchEnd(e) {
+
+const now = Date.now();
+  if (now - lastTouchTime < 800) return; // evita ejecuciones rápidas seguidas
+  lastTouchTime = now;
+
+  const touchEndY = e.changedTouches[0].clientY;
+  const deltaY = touchStartY - touchEndY;
+
+  if (Math.abs(deltaY) < 30) return; // evitar toques accidentales
+
+  // Simula un evento wheel con deltaY positivo o negativo
+  const fakeWheelEvent = {
+    deltaY: deltaY,
+    preventDefault: () => {}, // tu handleScroll espera esto
+  };
+
+  handleScroll(fakeWheelEvent);
+}
+
+// 📱 Activar solo si el dispositivo tiene pantalla táctil
+if ('ontouchstart' in window) {
+  window.addEventListener('touchstart', handleTouchStart, { passive: true });
+  window.addEventListener('touchend', handleTouchEnd, { passive: true });
+}
 }
