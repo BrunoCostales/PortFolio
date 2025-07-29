@@ -1719,7 +1719,7 @@ width: 100%;
   }
 
     .bannerTitleBack {
-    font-size: 26vw;
+    /* font-size: 26vw;
     top: 2%;
     left: 16%;
     text-shadow:
@@ -1733,12 +1733,13 @@ width: 100%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: ghost-disintegrate 8s infinite alternate;
-    filter: blur(2.5px) brightness(1.1);
+    filter: blur(2.5px) brightness(1.1); */
+    display: none;
 
     
 
     }
-    @keyframes ghost-disintegrate {
+    /* @keyframes ghost-disintegrate {
       0% {
       letter-spacing: 0.02em;
       filter: blur(1px) brightness(1.1);
@@ -1772,7 +1773,7 @@ width: 100%;
         12px 12px 72px rgba(242,92,132,0.14),
         -12px -12px 96px rgba(90,49,225,0.14);
       }
-    }
+    } */
 
 .bannerTitleBack{
   top: -22%;

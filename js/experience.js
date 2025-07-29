@@ -17,8 +17,7 @@ export function expAnimationInit() {
       scrub: 2,
       pin: true,
       anticipatePin: 1,
-       onStart: () => {
-        scrollTrigger.refresh();      }, 
+       
     }
   });
 
