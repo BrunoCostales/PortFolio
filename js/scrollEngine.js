@@ -7,9 +7,13 @@ export function initScrollEngine() {
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // suavidad
     direction: 'vertical',
     gestureDirection: 'vertical',
-    
+    touchMultiplier:1.0,
     wheelMultiplier:1.4,
-    syncTouch:false
+    syncTouch:true,
+    smoothTouch: false,
+     infinite: false,
+    autoResize: true
+
   });
 
   function raf(time) {
@@ -37,5 +41,6 @@ export function initScrollEngine() {
 ScrollTrigger.refresh();
 
   // Exporta lenis si querés usar scrollTo desde otros módulos
+  
   return lenis;
 }

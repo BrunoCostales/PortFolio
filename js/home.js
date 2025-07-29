@@ -53,6 +53,9 @@ export function initHomeAboutScroll(lenis) {
   setupAboutObserver(); // ✅ solo una vez
 
   let isAnimating = false;
+  let touchStartY = 0;
+  let delta;
+  
 
   const handleScroll = (e) => {
     if (isAnimating) {
@@ -60,7 +63,18 @@ export function initHomeAboutScroll(lenis) {
       return;
     }
 
-    const delta = e.deltaY;
+     if (e.type === 'wheel') {
+    delta = e.deltaY;
+  } else if (e.type === 'touchend') {
+    const touchEndY = e.changedTouches[0].clientY;
+    delta = touchStartY - touchEndY;
+  } else {
+    return;
+  }
+
+
+  
+
     const scrollY = window.scrollY;
     const homeTop = home.offsetTop;
     const aboutTop = about.offsetTop;
@@ -73,8 +87,8 @@ export function initHomeAboutScroll(lenis) {
       isAnimating = true;
       e.preventDefault();
       lenis.scrollTo(about, {
-        duration: 1,
-        easing: (t) => 1 - Math.pow(1 - t, 3),
+        duration:1.4,
+        easing: (t) => -(Math.cos(Math.PI * t) - 1) / 2,
         lock: true,
         onComplete: () => {
           isAnimating = false;
@@ -93,8 +107,8 @@ export function initHomeAboutScroll(lenis) {
       isAnimating = true;
       e.preventDefault();
       lenis.scrollTo(home, {
-        duration: 1,
-        easing: (t) => 1 - Math.pow(1 - t, 3),
+        duration: 1.2,
+        easing: (t) => -(Math.cos(Math.PI * t) - 1) / 2,
         lock: true,
         onComplete: () => {
           isAnimating = false;
@@ -127,35 +141,16 @@ export function initHomeAboutScroll(lenis) {
 
   window.addEventListener('wheel', handleScroll, { passive: false });
 
-  let touchStartY = 0;
+window.addEventListener('touchstart', (e) => {
+  touchStartY = e.changedTouches[0].clientY;
+  
+}, { passive: false });
+window.addEventListener('touchend', handleScroll, { passive: false });
+window.addEventListener('touchmove', (e) => {
+  if (isAnimating) {
+    e.preventDefault();
+  }
+}, { passive: false });
 
-function handleTouchStart(e) {
-  touchStartY = e.touches[0].clientY;
-}
 
-function handleTouchEnd(e) {
-
-const now = Date.now();
-  if (now - lastTouchTime < 800) return; // evita ejecuciones rápidas seguidas
-  lastTouchTime = now;
-
-  const touchEndY = e.changedTouches[0].clientY;
-  const deltaY = touchStartY - touchEndY;
-
-  if (Math.abs(deltaY) < 30) return; // evitar toques accidentales
-
-  // Simula un evento wheel con deltaY positivo o negativo
-  const fakeWheelEvent = {
-    deltaY: deltaY,
-    preventDefault: () => {}, // tu handleScroll espera esto
-  };
-
-  handleScroll(fakeWheelEvent);
-}
-
-// 📱 Activar solo si el dispositivo tiene pantalla táctil
-if ('ontouchstart' in window) {
-  window.addEventListener('touchstart', handleTouchStart, { passive: true });
-  window.addEventListener('touchend', handleTouchEnd, { passive: true });
-}
 }

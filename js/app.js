@@ -38,8 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
 function prepareLenguage() {
    
   const btnEn = document.getElementById('btn-en');

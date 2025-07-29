@@ -1,8 +1,10 @@
 import { expAnimationInit } from "./experience.js";
+import { shooter } from "./separator.js";
 
 export function initAboutAnimations(value) {
   const tl = gsap.timeline({
     scrollTrigger: {
+      id:"aboutTrigger",
       trigger: '#about',
       start: 'top top', // cuando el fondo del trigger llega al fondo de la ventana
       end: '+=200%',
@@ -11,17 +13,12 @@ export function initAboutAnimations(value) {
       scrub: true, // hace que la animación siga el scroll
        // fija el elemento durante la animación
       markers: false,
-      toggleActions: 'play reverse play reverse', // acciones al entrar y salir del trigger
-      
-     onLeave: () => {
-        const aboutTrigger = ScrollTrigger.getById("about");
-        if (aboutTrigger) {
-          aboutTrigger.kill(true);
-        }
-
-        ScrollTrigger.refresh(true);
+      toggleActions: 'play reverse play reverse', // acciones al entrar y salir del trigger,
+      onStart: () => {
+        scrollTrigger.refresh();      }, 
+    
         
-      }
+    
      
     },
     
@@ -67,4 +64,5 @@ export function initAboutAnimations(value) {
   duration: 1.5,
   ease: 'power1.out'
 },0 );
+
 }

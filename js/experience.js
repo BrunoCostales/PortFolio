@@ -1,17 +1,24 @@
+export let tl;
 export function expAnimationInit() {
+    
   const container = document.querySelector("#experience");
+  
+
   const projectList = container.querySelector(".projectList");
   const destello =document.querySelector(".flash");
   const scrollLength = projectList.scrollWidth - window.innerWidth;
 
-  const tl = gsap.timeline({
+ tl = gsap.timeline({
     scrollTrigger: {
+      id: "experienceTimeline",
       trigger: container,
       start: "top top",
       end: `+=${scrollLength}`,
       scrub: 2,
       pin: true,
-      anticipatePin: 1
+      anticipatePin: 1,
+       onStart: () => {
+        scrollTrigger.refresh();      }, 
     }
   });
 
@@ -35,6 +42,7 @@ export function expAnimationInit() {
 
 
     ScrollTrigger.create({
+      id:"experienceTrigger",
     trigger: container,
     start: "top top",
     end: `+=${scrollLength}`,
@@ -53,7 +61,9 @@ export function expAnimationInit() {
     onEnter: () => destello.style.opacity = 1,
     
     onEnterBack: () => destello.style.opacity = 1,
-    onLeaveBack: () => destello.style.opacity = 0
+    onLeaveBack: () => destello.style.opacity = 0,
+     onStart: () => {
+        scrollTrigger.refresh();      }, 
   });
   
 }

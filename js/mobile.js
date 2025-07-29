@@ -7,13 +7,17 @@ export function initMobile() {
 // 🍔 MENÚ HAMBURGUESA
 const burguerMenu = document.querySelector('.menuIcon');
 const mobileMenu = document.querySelector('.mobileMenu');
-const navLinks = document.querySelectorAll('.mobileMenu a');
+const navLinks = document.querySelectorAll('.navLinks a');
+console.log(navLinks);
+
 
 burguerMenu.addEventListener('click', () => {
   burguerMenu.classList.toggle('active');
   mobileMenu.classList.toggle('active');
   
 });
+
+  
 
 navLinks.forEach(link => {
   link.addEventListener('click', (e) => {
