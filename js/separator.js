@@ -9,17 +9,8 @@ ScrollTrigger.create({
   onEnter: () => {
     ScrollTrigger.refresh(true);
     expAnimationInit(); // llama tu animación
-  },
-  onEnterBack: () => {
-    ScrollTrigger.refresh(true);
-    expAnimationInit(); // llama tu animación al volver
-  },
-  onLeave: () => {
-    ScrollTrigger.refresh();
-  },
-  onLeaveBack: () => {
-    ScrollTrigger.refresh();
   }
+
 });
 
 }
