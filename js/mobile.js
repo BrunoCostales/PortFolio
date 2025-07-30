@@ -8,7 +8,6 @@ export function initMobile() {
 const burguerMenu = document.querySelector('.menuIcon');
 const mobileMenu = document.querySelector('.mobileMenu');
 const navLinks = document.querySelectorAll('.navLinks a');
-console.log(navLinks);
 
 
 burguerMenu.addEventListener('click', () => {

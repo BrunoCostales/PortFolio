@@ -416,6 +416,11 @@ li a:hover {
   pointer-events: none;
   user-select: none;
   transform: translate(-50%, 0); /* Centra horizontalmente respecto a left */
+   will-change: transform, opacity;
+  backface-visibility: hidden;
+
+
+  
 }
 
 .sillhoullete img {
@@ -430,6 +435,7 @@ li a:hover {
   display: block;
   filter: drop-shadow(0 0 10px rgb(0, 0, 0));
   mix-blend-mode: lighten;
+  
   
  
 }
@@ -1921,15 +1927,22 @@ nav {
   }
   .sillhoullete{
     top:40vh;
-    left: 70vw;
-    width: 80vw;
-    mask-image: linear-gradient(to top, transparent 35%, black 85%);
+    left: 65vw;
+    width: 300px;
+    height: 300px;
+   
+   
+   
+    
     
   }
   .sillhoullete img{
 
-    height: 400px;
+    height: 300px;
     width: 300px;
+   
+    
+
   }
 .mobileHide{
   display: none;
@@ -1946,10 +1959,10 @@ nav {
 .navLinksAbout{
   list-style: none;
   padding: 0;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 .navLinksAbout li a{
-  font-size: 6vw;
+  font-size: 8vw;
 
 }
 .layoutAboutBox{
@@ -1959,45 +1972,55 @@ nav {
   align-items: flex-start;
 }
 #about .description{
-  height: 65vh;
+  height: auto;
   width: 80vw;
   padding: 1vw;
 }
+.hideblock{
+  width: 100%;
+}
+
 .hideblock .description p{
 font-size: 12px;
 margin-top: 3vh;
 
 }
 .Discover{
-  top: -6vh;
-  left: 50vw;
+  top: 40vh;
+  left: 80vw;
 }
 #experience .mainContent{
   flex-direction: column-reverse;
   align-items: center;
+  height: 90vh;
 }
 .experienceTitlebox{
   justify-content: flex-start;
   width: 89%;
 }
 .experienceTitlebox h2{
-  font-size: 2vw;
+  font-size: 3vw;
 }
 .experienceTitlebox h1{
 
-  font-size: 4vw;
+  font-size: 6vw;
 }
 #experience .banner-content{
 margin-bottom: 5vh;
 margin-right: 0;
 padding: 3vw;
-width: 65%;
+width: 85%;
 }
-
+#experience .containerMain{
+  width: 100%;
+  height: 90vh;
+  
+  
+}
 #experience .leadd{
 
 
-font-size: 12px;
+font-size: 13px;
 padding-left: 0px;
 padding:1vw;
 
@@ -2007,8 +2030,9 @@ padding:1vw;
   align-items: center;
 }
 .experienceList p {
-  max-width: 55vw;
-  font-size: 7px;
+  max-width: 95vw;
+  font-size: 12px;
+  text-align:center;
 }
 .experienceList h2 {
   font-size: 13px;
@@ -2022,10 +2046,12 @@ padding:1vw;
 .work{
   flex-direction: column-reverse;
   align-items: center;
+  height: 90vh;
+  justify-content: center;
 }
 .workContent{
 width: 90vw;
-height: 63vh;
+height: 50vh;
 display: flex;
 flex-direction: column-reverse;
 justify-content: space-evenly;
@@ -2053,6 +2079,7 @@ justify-content: center;
 }
 .projectCardImage img {
   width: 300px;
+  height: 100px;
  
 }
 .workContent p {

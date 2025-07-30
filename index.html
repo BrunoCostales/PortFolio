@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Web portfolio of Bruno Costales, web developer with experience in front-end, back-end, scripting and WordPress solutions.">
+  <meta name="description" content="Web portfolio of Bruno Costales, web developer with experience in front-end, back-end, scripting and WordPress solutions.">
+
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,400;0,700;1,100;1,700&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
@@ -167,7 +168,7 @@
 
 
             <div class="aboutImagesStak">
-               <div class="Discover"><img src="images/silueta3.png" alt="sillhoulleteImage Discover"></div>
+               <div class="Discover"><img  fetchpriority="high"  src="images/silueta3.png" alt="sillhoulleteImage Discover"></div>
              <div class="sillhoulleteBoxAbout"><img src="images/silueta.png" alt="sillhoulleteImage"></div>
             </div>
           </div>
@@ -206,8 +207,8 @@
         <div class="experienceTitlebox">
             <h2>About Me</h2>
             <h1>Formation</h1>
-            <p class="leadd">My training includes a degree in Web Development from a private university in Argentina, where I
-              acquired skills in front-end and back-end development, as well as scripting. I have also completed
+            <p class="leadd">My training includes a degree in Web Development from a private university in Argentina <span class="mobileHide"> , where I
+              acquired skills in front-end and back-end development, as well as scripting.</span> I have also completed
               specialized courses in WordPress development and agile methodologies.</p>
           </div>
         <div class="banner-content">
@@ -219,7 +220,7 @@
               <ul>
                 <li>
                   <h2>Freelance Developer</h2>
-                  <p>While living in Aspen, Colorado, I worked as a freelance developer and created the website LimitlessFeet.com for Foot Foundations, a company specializing in orthopedic solutions. I managed the entire development cycle, from visual design to technical implementation <span class="mobileHide">, strengthening my ability to work independently, communicate with clients in English, and deliver tailored solutions aligned with their business goals</span>.</p>
+                  <p>While living in Aspen, Colorado, I worked as a freelance developer and created the website LimitlessFeet.com for Foot Foundations, a company specializing in orthopedic solutions.<span class="mobileHide"> I managed the entire development cycle, from visual design to technical implementation , strengthening my ability to work independently, communicate with clients in English, and deliver tailored solutions aligned with their business goals</span>.</p>
                 </li>
                 <li>
                   <h2>Software  Analyst</h2>
@@ -227,7 +228,7 @@
                 </li>
                 <li>
                   <h2>Full Stack Developer</h2>
-                  <p >As part of an intensive bootcamp at Digital House, I developed MyMad Games, a fictional e-commerce platform focused on video game sales. The project was built using HTML, CSS, JavaScript, and Node.js, incorporating UX/UI design principles and agile methodologies.<span class="mobileHide"> Beyond improving my technical skill set, this project taught me how to collaborate in a team setting, meet tight deadlines, and maintain both visual and functional consistency in a full stack application.</span></p>
+                  <p >As part of an intensive bootcamp at Digital House, I developed MyMad Games, a fictional e-commerce platform focused on video game sales.<span class="mobileHide"></span> The project was built using HTML, CSS, JavaScript, and Node.js, incorporating UX/UI design principles and agile methodologies. Beyond improving my technical skill set, this project taught me how to collaborate in a team setting, meet tight deadlines, and maintain both visual and functional consistency in a full stack application.</span></p>
                 </li>
               </ul>
             </div>
@@ -259,15 +260,21 @@
         <ul>WOOCOMERCE</ul></li>
                </div>
               
-              <div class="description"><p>Is a modern web platform developed for a company that specializes in 3D foot scanning and the creation of custom orthopedic insoles. The site showcases the brands advanced biomechanical analysis, highlighting how 3D scans are used to identify key pressure points—such as the heel center and metatarsal heads—and generate highly personalized insole designs.The project involved building a responsive, performance-optimized website that clearly communicates the brands innovative approach. It explains the digital workflow from scan to final insole, including precise adjustments for support and alignment tailored to each individual.
-The result is a clean, user-centered platform that reflects the companys focus on technology, precision, and personalized care.
+              <div class="description"><p>Is a modern web platform developed for a company that specializes in 3D foot scanning and the creation of custom orthopedic insoles. <span class="mobileHide"> The site showcases the brands advanced biomechanical analysis, highlighting how 3D scans are used to identify key pressure points—such as the heel center and metatarsal heads—and generate highly personalized insole designs.The project involved building a responsive, performance-optimized website that clearly communicates the brands innovative approach. It explains the digital workflow from scan to final insole, including precise adjustments for support and alignment tailored to each individual.
+</span> The result is a clean, user-centered platform that reflects the companys focus on technology, precision, and personalized care.
 </p></div>
               <div class="projectLinks">
                 <a href="https://Limitlessfeet.com" target="_blank">View Project</a>
                 <a href="https://Limitlessfeet.com" target="_blank">GitHub</a>
             </div>
            </div>
-           <div class="projectCardImage"><a href="https://Limitlessfeet.com" target="_blank"><img  loading="lazy" src="images/Limitless.png" alt="FootFoundations Website" ></a></div>
+           <div class="projectCardImage"><a href="https://Limitlessfeet.com" target="_blank">
+           <picture>
+  <source srcset="images/Limitless-mobile.webp" media="(max-width: 768px)">
+  <source srcset="images/Limitless.png">
+  <img loading="lazy" src="images/Limitless.png" alt="FootFoundations Website">
+</picture>
+          </a></div>
             </div>    <div class="work">
            <div   class="workContent">
                <h1>MY MADGAMES</h1>
@@ -286,7 +293,11 @@ The result is a clean, user-centered platform that reflects the companys focus o
                 <a href="https://github.com/BrunoCostales/mymadgames" target="_blank">GitHub</a>
             </div>
            </div>
-           <div class="projectCardImage"><img  loading="lazy" src="images/mymadGame.png" alt="MymadGames Website"></div>
+           <div class="projectCardImage"><picture>
+  <source srcset="images/mymadgame-mobile.webp" media="(max-width: 768px)" type="image/webp">
+  <source srcset="images/mymadGame.png">
+  <img loading="lazy" src="images/mymadGame.png" alt="MymadGames Website">
+</picture></div>
             </div>
 
             
@@ -309,7 +320,7 @@ The result is a clean, user-centered platform that reflects the companys focus o
                 <a href="#" target="_blank">GitHub</a>
             </div>
            </div>
-           <div  class="projectCardImage"><img loading="lazy" src="images/cba.png" alt="BrunoCostalesDev Logo"></div>
+           <div  class="projectCardImage"><img loading="lazy" src="images/cba.webp" alt="BrunoCostalesDev Logo"></div>
             </div>
             
           
@@ -380,7 +391,7 @@ The result is a clean, user-centered platform that reflects the companys focus o
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer data-lazy ></script>
   <script type="module" src="./js/app.js"></script>
 
 </body>

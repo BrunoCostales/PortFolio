@@ -2,11 +2,12 @@
 import {initScrollEngine} from './scrollEngine.js';
 import { initHomeAboutScroll } from './home.js';
 import { initAboutAnimations } from './about.js';
-import { expAnimationInit, tl } from './experience.js';
+
 import { shooter } from './separator.js';
 import { initEmailForm } from './email.js';
 import { moveBubbles } from './bubles.js';
-import { initTouchScroll } from './touchScroll.js';
+import { scrollEngineMobile } from './scrollEngineMobile.js';
+
 
 gsap.registerPlugin(ScrollTrigger);
 const lenis = initScrollEngine();
@@ -20,7 +21,12 @@ ScrollTrigger.getAll().forEach(t => t.kill(true));
 
     moveBubbles();
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  initHomeAboutScroll(lenis);
+    if (isTouchDevice && window.innerWidth <=768) {
+
+      scrollEngineMobile();
+      
+    }else{
+        initHomeAboutScroll(lenis);
    initAboutAnimations();
 
   
@@ -31,6 +37,10 @@ ScrollTrigger.getAll().forEach(t => t.kill(true));
 
 
  
+
+
+    }
+
 
 
 }
