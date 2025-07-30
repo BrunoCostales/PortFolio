@@ -7,10 +7,10 @@ export function scrollEngineMobile() {
   
 
 const lenis = new Lenis({
-  duration: 1.65,
+  duration: 1.35,
   
   
-  touchMultiplier: .8,
+  touchMultiplier: .6,
   gestureOrientation: 'vertical',
   easing: (t) => t < 0.5
     ? 4 * t * t * t
