@@ -92,8 +92,7 @@ export function initHomeAboutScroll(lenis) {
         lock: true,
         onComplete: () => {
           isAnimating = false;
-           const trigger = ScrollTrigger.getById('about');
-          if (trigger) trigger.kill(true);
+           
 
           gsap.set(['#mainHeading'], { clearProps: "all" });
 

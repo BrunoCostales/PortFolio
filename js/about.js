@@ -1,6 +1,13 @@
 
 
 export function initAboutAnimations(value) {
+  const trigger =ScrollTrigger.getById('aboutTrigger');
+  if (trigger) {
+  trigger.kill(true); // elimina el trigger si ya existe
+   // actualiza el scrollTrigger
+  
+  }
+
   const tl = gsap.timeline({
     scrollTrigger: {
       id:"aboutTrigger",
