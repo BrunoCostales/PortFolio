@@ -42,5 +42,6 @@ ScrollTrigger.refresh();
 
   // Exporta lenis si querés usar scrollTo desde otros módulos
   
+  
   return lenis;
 }

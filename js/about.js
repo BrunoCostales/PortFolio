@@ -1,5 +1,4 @@
-import { expAnimationInit } from "./experience.js";
-import { shooter } from "./separator.js";
+
 
 export function initAboutAnimations(value) {
   const tl = gsap.timeline({

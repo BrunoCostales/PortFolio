@@ -2,45 +2,39 @@
 import {initScrollEngine} from './scrollEngine.js';
 import { initHomeAboutScroll } from './home.js';
 import { initAboutAnimations } from './about.js';
-
 import { shooter } from './separator.js';
-import { initEmailForm } from './email.js';
 import { moveBubbles } from './bubles.js';
-import { scrollEngineMobile } from './scrollEngineMobile.js';
 
 
-gsap.registerPlugin(ScrollTrigger);
-const lenis = initScrollEngine();
+
+
 
 
 export function initApp() {
-scrollToEngine();
 
-ScrollTrigger.getAll().forEach(t => t.kill(true));
-  ScrollTrigger.refresh(true);
+
 
     moveBubbles();
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    if (isTouchDevice && window.innerWidth <=768) {
-
-      scrollEngineMobile();
+    
+    
+      const lenis = initScrollEngine();
+      gsap.registerPlugin(ScrollTrigger);
+      scrollToEngine(lenis);
       
-    }else{
+ScrollTrigger.getAll().forEach(t => t.kill(true));
+  ScrollTrigger.refresh(true);
         initHomeAboutScroll(lenis);
    initAboutAnimations();
+   shooter();
 
-  
- 
-  shooter();
- initEmailForm();
 
 
 
  
 
 
-    }
-
+    
+    
 
 
 }
@@ -48,7 +42,7 @@ ScrollTrigger.getAll().forEach(t => t.kill(true));
 
 
 
-function scrollToEngine() {
+function scrollToEngine(lenis) {
  
   const bottom=lenis.limit;
   

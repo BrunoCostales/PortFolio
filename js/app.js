@@ -1,13 +1,12 @@
 import { contactCopy } from './contact.js';
 import { initApp } from './coordScroll.js';
 import { initMobile } from './mobile.js';
+import { initEmailForm } from './email.js';
 
 function isMobile() {
-  return (
-    'ontouchstart' in window ||
-    navigator.maxTouchPoints > 0 ||
-    window.innerWidth <= 768
-  );
+const ua = navigator.userAgent;
+  return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+
 }
 
 
@@ -16,14 +15,22 @@ function isMobile() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+console.log(isMobile());
 
 
+  if (isMobile()) {
+    initMobile();
+    console.log("Mobile detected, initializing mobile app.");
+    
+  }else{
+    initApp();
+  }
+  
 
-  initApp();
-
-  initMobile();
+  
 
 
+ initEmailForm();
 
   contactCopy();
   prepareLenguage();

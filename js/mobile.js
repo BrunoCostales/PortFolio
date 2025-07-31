@@ -1,3 +1,4 @@
+import { coordScrollMobile } from "./coordScrollMobile.js";
 
 export function initMobile() {
     
@@ -34,9 +35,7 @@ navLinks.forEach(link => {
   });
 });
 
-
-
-
+ coordScrollMobile();
 
 
 
