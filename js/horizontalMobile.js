@@ -1,13 +1,13 @@
-export function horizontalMobile() {
+export function horizontalMobile(scrollLength,container,projectList) {
    
 
     
-  const container = document.querySelector("#experience");
+
   
   let tl;
-  const projectList = container.querySelector(".projectList");
+ 
   const destello =document.querySelector(".flash");
-  const scrollLength = projectList.scrollWidth - window.innerWidth;
+ 
   console.log(scrollLength);
 
   
@@ -18,25 +18,13 @@ export function horizontalMobile() {
       trigger: container,
       start: "top top",
       end: `+=${scrollLength}`,
-      scrub: 1.8,
+      scrub: 0.5,
       pin: true,
-      anticipatePin: 1,
+      anticipatePin: 0.5,
       once:false,
       ignoreMobileResize: true,
-      inavlidateOnRefresh: true,
-      onLeave: () => {
-    // Pequeño delay antes del scroll automático
-    gsap.delayedCall(0.5, () => {
-      gsap.to(window, {
-        scrollTo: {
-          y: "#contact", // ⚠️ ajustá al ID de tu siguiente sección
-          offsetY: 0     // si tenés header fijo, podés poner un valor aquí
-        },
-        duration: 1.6,
-        ease: "power2.inOut"
-      });
-    });
-  }
+      invalidateOnRefresh: true,
+    
       
      
        
@@ -61,7 +49,5 @@ export function horizontalMobile() {
   }, "<");
 
 
-ScrollTrigger.normalizeScroll(true);
-  
   
 }

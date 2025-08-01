@@ -1,20 +1,13 @@
 
 
 export function scrollEngineMobile() {
-  ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-  ScrollTrigger.refresh();
-  gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
+  
+  
 
-  ScrollTrigger.config({
-    ignoreMobileResize: true,
-    autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load,resize'
-  });
 
-  window.addEventListener('resize', () => ScrollTrigger.refresh());
+  
 
-  requestAnimationFrame(() => ScrollTrigger.refresh());
-
-  // Animación de ABOUT
+  
   const aboutTl = gsap.timeline({
     scrollTrigger: {
       id: "aboutTriggerMobile",
@@ -22,19 +15,13 @@ export function scrollEngineMobile() {
       start: 'top top',
       end: '+=120%',
       pin: true,
-      scrub: 0.8,
-      fastScrollEnd: true,
-      anticipatePin: true,
+      scrub: 0.5,
+      
+      anticipatePin: 1,
       invalidateOnRefresh: true,
       ignoreMobileResize: true,
       toggleActions: 'play reverse play reverse',
-      onStart: () => {
-        ScrollTrigger.refresh();
-        
-      },
-      onLeave: () => {
-  ScrollTrigger.refresh();
-}
+   
     }
   });
 

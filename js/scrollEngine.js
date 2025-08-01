@@ -7,12 +7,12 @@ export function initScrollEngine() {
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // suavidad
     direction: 'vertical',
     gestureDirection: 'vertical',
-    touchMultiplier:1.0,
+    touchMultiplier:0.7,
     wheelMultiplier:1.4,
     syncTouch:true,
     smoothTouch: false,
      infinite: false,
-    autoResize: true
+    autoResize: true,
 
   });
 

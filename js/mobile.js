@@ -39,9 +39,38 @@ navLinks.forEach(link => {
     }
   });
 });
-
+callLenis();
  coordScrollMobile();
 
 
 
+}
+function callLenis() {
+  // ✅ Solo ejecutar en móviles
+  if (window.innerWidth > 768 || typeof Lenis === 'undefined') return;
+
+  // ✅ Crear instancia Lenis
+  const lenis = new Lenis({
+    smooth: false,             // No queremos smooth tradicional
+    smoothTouch: true,         // ✅ Scroll fluido en móviles
+    touchMultiplier: 0.6,      // Sensibilidad del dedo
+    duration: 1.6              // Fluidez general
+  });
+
+  // ✅ Vincular scroll con ScrollTrigger
+  lenis.on('scroll', ScrollTrigger.update);
+
+  // ✅ Loop de animación
+  function raf(time) {
+    lenis.raf(time);
+    ScrollTrigger.update(); // Sincroniza GSAP
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+  console.log("Lenis initialized for mobile scrolling", lenis);
+
+
+  // ✅ Devuelve la instancia si la querés usar en otro módulo
+  return lenis;
 }

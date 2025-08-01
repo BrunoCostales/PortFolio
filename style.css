@@ -1705,6 +1705,10 @@ width: 100%;
     width: 48vw;
     max-width: 90vw;
   }
+  #separator {
+    height: 50vh;
+    
+  }
 }
 
 @media (max-width: 768px) {
@@ -2056,6 +2060,9 @@ margin-top: 3vh;
 .Discover{
   top: 40vh;
   left: 80vw;
+}
+#separator {
+  display: none;
 }
 #experience{
 
