@@ -1784,9 +1784,8 @@ width: 100%;
 @media (max-width: 600px) {
   html, body{
     overflow-x: hidden;
-     overflow-y: auto;   /* ✅ permite scroll vertical normal */
-  scroll-behavior: auto; /* ❗️ importante si usás GSAP o Lenis */
-  touch-action: auto;
+     
+ 
   }
 
  
