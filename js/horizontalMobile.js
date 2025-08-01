@@ -9,6 +9,7 @@ export function horizontalMobile() {
   const destello =document.querySelector(".flash");
   const scrollLength = projectList.scrollWidth - window.innerWidth;
   console.log(scrollLength);
+
   
 
  tl = gsap.timeline({
@@ -17,10 +18,27 @@ export function horizontalMobile() {
       trigger: container,
       start: "top top",
       end: `+=${scrollLength}`,
-      scrub: true,
+      scrub: 1.8,
       pin: true,
       anticipatePin: 1,
-      once:false
+      once:false,
+      ignoreMobileResize: true,
+      inavlidateOnRefresh: true,
+      onLeave: () => {
+    // Pequeño delay antes del scroll automático
+    gsap.delayedCall(0.5, () => {
+      gsap.to(window, {
+        scrollTo: {
+          y: "#contact", // ⚠️ ajustá al ID de tu siguiente sección
+          offsetY: 0     // si tenés header fijo, podés poner un valor aquí
+        },
+        duration: 1.6,
+        ease: "power2.inOut"
+      });
+    });
+  }
+      
+     
        
     }
   });
@@ -44,29 +62,6 @@ export function horizontalMobile() {
 
 
 ScrollTrigger.normalizeScroll(true);
-    ScrollTrigger.create({
-      id:"experienceTrigger",
-    trigger: container,
-    start: "top top",
-    end: `+=${scrollLength}`,
-    scrub: true,
-    onUpdate: self => {
-      const progress = self.progress;
-
-      // Movimiento relativo
-      const x = 10 + progress * 300; // 70vw a 85vw
-      const y = 90 + Math.sin(progress * Math.PI) * 5; // leve efecto en Y
-
-      destello.style.left = `${x}vw`;
-      destello.style.top = `${y}vh`;
-      
-    },
-    onEnter: () => destello.style.opacity = 1,
-    
-    onEnterBack: () => destello.style.opacity = 1,
-    onLeaveBack: () => destello.style.opacity = 0,
-     onStart: () => {
-        scrollTrigger.refresh();      }, 
-  });
+  
   
 }

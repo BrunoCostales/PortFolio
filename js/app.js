@@ -76,3 +76,14 @@ function changeLanguage(lang) {
     window.location.href = 'index.html';
   }
 }
+window.addEventListener('resize', () => {
+  ScrollTrigger.refresh();
+});
+window.addEventListener('resize', checkZoomAndRefresh);
+window.addEventListener('load', checkZoomAndRefresh);
+function checkZoomAndRefresh() {
+  const zoom = Math.round(window.devicePixelRatio * 100);
+  if (zoom !== 100) {
+    ScrollTrigger.refresh(); // 🔄 fuerza ajuste
+  }
+}

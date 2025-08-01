@@ -3,6 +3,7 @@ export function shooter(){
 
 ScrollTrigger.create({
   id:"shooterTrigger",
+  invalidateOnRefresh: true,
   trigger: "#separator",
   start: "bottom bottom", // cuando la parte inferior del separador toca el fondo de la pantalla
   once: false, // para que se ejecute solo una vez
