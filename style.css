@@ -1797,7 +1797,7 @@ width: 100%;
     overflow: hidden;     /* ✅ evita scroll nativo mientras animás */
    
 
-} */
+
 
  *:hover {
     transition: none;
@@ -2219,3 +2219,4 @@ footer small {
   font-size: 3vw;
 }
 
+}
