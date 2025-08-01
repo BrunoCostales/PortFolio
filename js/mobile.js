@@ -53,7 +53,7 @@ function callLenis() {
   const lenis = new Lenis({
     smooth: false,             // No queremos smooth tradicional
     smoothTouch: true,         // ✅ Scroll fluido en móviles
-    touchMultiplier: 0.6,      // Sensibilidad del dedo
+    touchMultiplier: 1.3,      // Sensibilidad del dedo
     duration: 1.6              // Fluidez general
   });
 

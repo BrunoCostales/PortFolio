@@ -15,7 +15,7 @@ export function scrollEngineMobile() {
       start: 'top top',
       end: '+=120%',
       pin: true,
-      scrub: 0.5,
+      scrub: 0.3,
       
       anticipatePin: 1,
       invalidateOnRefresh: true,

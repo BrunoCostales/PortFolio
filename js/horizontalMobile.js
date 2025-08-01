@@ -18,7 +18,7 @@ export function horizontalMobile(scrollLength,container,projectList) {
       trigger: container,
       start: "top top",
       end: `+=${scrollLength}`,
-      scrub: 0.5,
+      scrub: 0.3,
       pin: true,
       anticipatePin: 0.5,
       once:false,
