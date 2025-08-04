@@ -14,11 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(isMobile());
   console.time("MOBILE INIT");
 
-  if (isMobile() || window.innerWidth <= 768) {
+  if (isMobile() && window.innerWidth <= 768) {
     initMobile();
     console.timeEnd("MOBILE INIT");
-    console.log("Mobile detected, initializing mobile app.");
   } else {
+    console.log("inicio en escritorio");
+
     initApp();
     window.addEventListener("resize", () => {
       ScrollTrigger.refresh();
