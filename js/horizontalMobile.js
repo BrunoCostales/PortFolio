@@ -1,53 +1,41 @@
-export function horizontalMobile(scrollLength,container,projectList) {
-   
-
-    
-
-  
+export function horizontalMobile(scrollLength, container, projectList) {
   let tl;
- 
-  const destello =document.querySelector(".flash");
- 
-  console.log(scrollLength);
+  ScrollTrigger.getById("horizontalScrollMobile")?.kill();
 
-  
-
- tl = gsap.timeline({
+  tl = gsap.timeline({
     scrollTrigger: {
-     
       trigger: container,
       start: "top top",
       end: `+=${scrollLength}`,
-      scrub: 0.3,
+      scrub: 0.1,
       pin: true,
-      anticipatePin: 0.5,
-      once:false,
+      anticipatePin: 1,
+      once: false,
       ignoreMobileResize: true,
       invalidateOnRefresh: true,
-    
-      
-     
-       
-    }
+      id: "horizontalScrollMobile",
+    },
   });
 
   // Paso 1: Iluminación
-  tl.to(container, {
-    filter: "brightness(1)",
-    duration: 0.4
-  });
+
+  tl.to(
+    container,
+    {
+      opacity: 1,
+      ease: "power2.out",
+      duration: 0.19, // ocupa el 20% inicial del timeline
+    },
+    0
+  );
 
   // Paso 2: Movimiento horizontal
-  tl.to(container, {
-    x: -scrollLength,
-    ease: "none"
-  });
-   tl.to(destello, {
-    x: "10vw", // o "100px", según lo que quieras mover
-    y: "5vh", // leve movimiento hacia arriba
-    ease: "none"
-  }, "<");
-
-
-  
+  tl.to(
+    container,
+    {
+      x: -scrollLength,
+      ease: "none",
+    },
+    0.2
+  );
 }
