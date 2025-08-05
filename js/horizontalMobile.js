@@ -1,13 +1,15 @@
 export function horizontalMobile(scrollLength, container, projectList) {
   let tl;
+  let lenghtnew = scrollLength * 2;
+
   ScrollTrigger.getById("horizontalScrollMobile")?.kill();
 
   tl = gsap.timeline({
     scrollTrigger: {
       trigger: container,
       start: "top top",
-      end: `+=${scrollLength}`,
-      scrub: 0.1,
+      end: `+=${lenghtnew}`,
+      scrub: 0.3,
       pin: true,
       anticipatePin: 1,
       once: false,
@@ -33,7 +35,7 @@ export function horizontalMobile(scrollLength, container, projectList) {
   tl.to(
     container,
     {
-      x: -scrollLength,
+      x: -1 * scrollLength,
       ease: "none",
     },
     0.2

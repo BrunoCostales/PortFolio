@@ -1,6 +1,7 @@
 import { coordScrollMobile } from "./coordScrollMobile.js";
 export function initMobile() {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
   callLenis();
   coordScrollMobile();
   scrollToSectionMobile();
@@ -14,8 +15,8 @@ function callLenis() {
   const lenis = new Lenis({
     smooth: true, // No queremos smooth tradicional
     smoothTouch: true, // ✅ Scroll fluido en móviles
-    touchMultiplier: 0.9, // Sensibilidad del dedo
-    duration: 1.1, // Fluidez general,
+    touchMultiplier: 1.6, // Sensibilidad del dedo
+    duration: 0.7, // Fluidez general,
     easing: (t) => 1 - Math.pow(1 - t, 3),
   });
   requestAnimationFrame(raf);

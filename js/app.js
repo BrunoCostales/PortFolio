@@ -11,15 +11,9 @@ function isMobile() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log(isMobile());
-  console.time("MOBILE INIT");
-
   if (isMobile() && window.innerWidth <= 768) {
     initMobile();
-    console.timeEnd("MOBILE INIT");
   } else {
-    console.log("inicio en escritorio");
-
     initApp();
     window.addEventListener("resize", () => {
       ScrollTrigger.refresh();

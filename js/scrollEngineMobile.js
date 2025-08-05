@@ -6,7 +6,7 @@ export function scrollEngineMobile() {
       id: "aboutTriggerMobile",
       trigger: "#about",
       start: "top 20%",
-      end: "center top", // distancia de scroll en la que puede activarse
+      end: "top top",
       scrub: false,
       once: true, // opcional: se dispara una sola vez
       invalidateOnRefresh: true,
