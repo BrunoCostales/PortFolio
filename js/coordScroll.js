@@ -24,7 +24,6 @@ export function scrollToEngine(lenis) {
   const goToContact = document.getElementById("btnScrollToContact");
   const vh = window.innerHeight;
   goToContact.addEventListener("click", (e) => {
-    console.log("Hizo click");
     ScrollTrigger.getAll().forEach((trigger) => {
       trigger.kill(true); // destruye animación y limpia
     });

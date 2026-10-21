@@ -2,6 +2,7 @@ import { contactCopy } from "./contact.js";
 import { initApp } from "./coordScroll.js";
 import { initMobile } from "./mobile.js";
 import { initEmailForm } from "./email.js";
+import { renderProjects } from "./projectCards.js";
 
 function isMobile() {
   const ua = navigator.userAgent;
@@ -11,6 +12,8 @@ function isMobile() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Las tarjetas tienen que existir antes de medir el scroll horizontal
+  renderProjects();
   if (isMobile() && window.innerWidth <= 768) {
     initMobile();
   } else {

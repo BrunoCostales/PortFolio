@@ -1,5 +1,4 @@
 import { initAboutAnimations } from './about.js';
-import { initApp } from './coordScroll.js';
 gsap.registerPlugin(ScrollTrigger);
 
 let inAbout = false; // ✅ mover afuera
@@ -111,7 +110,6 @@ export function initHomeAboutScroll(lenis) {
         lock: true,
         onComplete: () => {
           isAnimating = false;
-          initApp();
           initAboutAnimations(false); // ✅ reiniciar animaciones de About
           
            
