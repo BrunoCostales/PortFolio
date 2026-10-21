@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brunocostales.github.io/PortFolio/sitemap.xml
