@@ -7,14 +7,11 @@ export function contactCopy() {
     if (copyIcon && emailText) {
     copyIcon.addEventListener('click', () => {
       const email = emailText.textContent;
-      console.log(navigator.clipboard);
-      
-      console.log(email);
+
       
        if (navigator.clipboard) {
         navigator.clipboard.writeText(email)
           .then(() => {
-            console.log('Email copied to clipboard');
           })
           .catch(err => {
             console.error('Failed to copy text: ', err);
@@ -26,7 +23,6 @@ export function contactCopy() {
         // for example, by selecting the text in the emailText element
         // and instructing the user to press Ctrl+C or Cmd+C.
       }
-      console.log(email);
       
       
     });

@@ -6,14 +6,20 @@ export function expAnimationInit() {
 
   const projectList = container.querySelector(".projectList");
   const destello =document.querySelector(".flash");
-  const scrollLength = projectList.scrollWidth - window.innerWidth;
+  // Se mide en cada refresh: el ancho depende de las tarjetas y del viewport
+  const scrollLength = () => container.scrollWidth - window.innerWidth;
+
+  // shooter() vuelve a llamar esta función en cada entrada: evitar timelines duplicados
+  ScrollTrigger.getById("experienceTimeline")?.kill(true);
+  ScrollTrigger.getById("experienceTrigger")?.kill(true);
+  tl?.kill();
 
  tl = gsap.timeline({
     scrollTrigger: {
       id: "experienceTimeline",
       trigger: container,
       start: "top top",
-      end: `+=${scrollLength}`,
+      end: () => `+=${scrollLength()}`,
       scrub: 2,
       pin: true,
       anticipatePin: 1,
@@ -30,7 +36,7 @@ export function expAnimationInit() {
 
   // Paso 2: Movimiento horizontal
   tl.to(container, {
-    x: -scrollLength,
+    x: () => -scrollLength(),
     ease: "none"
   });
    tl.to(destello, {
@@ -45,7 +51,7 @@ export function expAnimationInit() {
       id:"experienceTrigger",
     trigger: container,
     start: "top top",
-    end: `+=${scrollLength}`,
+    end: () => `+=${scrollLength()}`,
     scrub: true,
     onUpdate: self => {
       const progress = self.progress;

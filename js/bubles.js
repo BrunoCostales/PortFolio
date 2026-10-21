@@ -1,6 +1,7 @@
 export function moveBubbles(){
 
 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const bubbles = document.querySelectorAll('.bubble');
 bubbles.forEach((bubble, i) => {
   let goingOut = true;

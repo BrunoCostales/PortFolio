@@ -28,15 +28,6 @@ export function initScrollEngine() {
   lenis.on('scroll', () => {
     ScrollTrigger.update();
   });
-  ScrollTrigger.scrollerProxy(document.body, {
-  ScrollTop(value) {
-    return arguments.length ? lenis.scrollTo(value) : lenis.scroll.instance.scroll.y
-  },
-  getBoundingClientRect() {
-    return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight }
-  },
-  pinType: document.body.style.transform ? "transform" : "fixed"
-});
 
 ScrollTrigger.refresh();
 
